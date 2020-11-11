@@ -11,3 +11,9 @@ import tkinter
 Ou, plus souvent :
 
 from tkinter import *
+
+dans le prgramme, les bib utiliser sont les suivants :
+import sqlite3
+import matplotlib.pyplot as plt
+import numpy as np
+from tkinter import messagebox as ms
