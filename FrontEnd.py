@@ -23,6 +23,7 @@ def openapp():
         plt.xticks(np.arange(len(target)), target)
         plt.show()
         pass
+    #sélection des colonnes
 
     def get_selected_row(event):
         global selected_tuple
@@ -40,18 +41,18 @@ def openapp():
         entry5.insert(END, selected_tuple[5])
         entry6.delete(0, END)
         entry6.insert(END, selected_tuple[6])
-
+#commande pour voir les données
     def view_command():
         list1.delete(0, END)
         for row in back.view():
             list1.insert(END, row)
-
+#commende pour chercher les données
     def search_command():
         list1.delete(0, END)
         for row in back.search(name_text.get(), address_text.get(), phone_number_text.get(), roomtype_text.get(),
                                noof_text.get(), amount_text.get()):
             list1.insert(END, row)
-
+# commande ajouter le patient
     def add_command():
         back.insert(name_text.get(), address_text.get(), phone_number_text.get(), noof_text.get(), roomtype_text.get(),
                     amount_text.get())
@@ -59,10 +60,10 @@ def openapp():
         list1.insert(END, (
         name_text.get(), address_text.get(), phone_number_text.get(), noof_text.get(), roomtype_text.get(),
         amount_text.get()))
-
+#commande supprimer les données
     def delete_command():
         back.delete(selected_tuple[0])
-
+#commande mise à jour
     def update_command():
         back.update(selected_tuple[0], name_text.get(), address_text.get(), phone_number_text.get(),
                     roomtype_text.get(), noof_text.get(), amount_text.get())
@@ -90,7 +91,7 @@ def openapp():
 
     label7 = Label(window, text="patient Id", font=('none 13 bold'))
     label7.grid(row=6, column=0)
-
+# définir les 6 entrés 
     name_text = StringVar()
     entry1 = Entry(window, textvariable=name_text)
     entry1.grid(row=1, column=1)
@@ -117,7 +118,7 @@ def openapp():
 
     list1 = Listbox(window, height=20, width=59)
     list1.grid(row=1, column=3, rowspan=6, columnspan=2)
-# affichage du graph par adresse qui est la 2me  colonne de la table
+# graph et les boutons
     scrl = Scrollbar(window)
     scrl.grid(row=1, column=2, sticky='ns', rowspan=6)
 
