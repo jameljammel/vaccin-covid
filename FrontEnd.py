@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-# connection à la base de donnée back.py
+
 def openapp():
     #affichage du graph en colonne par adresse
     def admin():
