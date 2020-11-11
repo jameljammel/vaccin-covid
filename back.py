@@ -54,7 +54,7 @@ def calculation(Age,Dose):
     elif Dose==("JAMEL" or "jamel"):
         V_id=int(Age)*1800
         return V_id
-    elif Dose==("HEPATITIES" or "hepstities"):
+    elif Dose==("VACCIN" or "vaccin"):
         V_id=int(Age)*2000
         return V_id
 connect()
